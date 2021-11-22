@@ -67,7 +67,7 @@
 
   
   
-**Scenario: Changing to a new password with two-step verification activated
+**Scenario: Changing to a new password with two-step verification activated (e-mail)
 > Given that I activated the *two-step verification* option in my account
 >
 > And I click the "Forgot password?" button
@@ -76,10 +76,28 @@
 >
 > Then I should see a "Insert the code sent to your e-mail" notification before change the password
   
-**Scenario: Think about a new one
+  
+  
+**Scenario: Changing to a new password with two-step verification activated (phone number)
+> Given that I activated the *two-step verification* option in my account
+>
+> And I click the "Forgot password?" button
+>
+> And I insert a valid phone number
+>
+> Then I should see a "Insert the code sent to your phone" notification before change the password
+  
+ 
+**Scenario: Think about options
 
 ## Sign up
   Terms of service User's stories
   
-**Scenario: 
+**Scenario: Accepting Terms of service
+> Given that I 
+>
+>
+>
+>
+>
 
