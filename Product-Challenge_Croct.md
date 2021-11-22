@@ -52,18 +52,18 @@
 >
 > And I insert valid information
 >
-> Then I should see a notification saying _"A new password has been sent to your email"
+> Then I should see a notification saying "A new password has been sent to your email"
   
   
   
 **Scenario: Searching for the user's account with invalid information
 > Given that I click the *Forgot password?* button
 >
-> And I see the _"Find your account: Insert your email or username"_ section
+> And I see the _"Find your account: Insert your email or username" section
 >
 > And I insert not valid information
 >
-> Then I should see a notification saying _"Email or username not found. Check your informations and insert it again"
+> Then I should see a notification saying "Email or username not found. Check your informations and insert it again"
 
   
   
@@ -76,12 +76,12 @@
 >
 > And I insert a valid email
 >
-> Then I should see a notification saying "Insert the code sent to your email" before change the password
+> Then I should see a notification saying "Insert the code sent to your email" 
   
   
   
 **Scenario: Changing to a new password with two-step verification activated (phone number)
-> Given that I activated the *two-step verification* option in my account
+> Given that the *two-step verification* option in my account is activated
 >
 > And I click the "Forgot password?" button
 >
@@ -89,19 +89,35 @@
 >
 > And I insert a valid phone number
 >
-> Then I should see a notification saying "Insert the code sent to your phone" before change the password
+> Then I should see a notification saying "Insert the code sent to your phone" 
   
  
-**Scenario: Inserting a wrong code in the two-step verification 
-> Given that I activated the *two-step verification* option in my account
+**Scenario: Inserting a wrong code in the two-step verification (email)
+> Given that the *two-step verification* option in my account is activated
 >
 > And I click the "Forgot password?" button
 >
 > When I see a section saying: "Insert your phone number or email in order to receive a code"
 >
-> And I insert a valid phone number/ email
+> And I insert a valid phone email
 >
-> And I see a notification saying "Insert the code sent to your phone" 
+> And I see a notification saying "Insert the code sent to your email" 
+>
+> When I insert the wrong verification code
+>
+> Then I should see a notification saying "The  inserted code is incorrect. Send a new code?"
+  
+  
+**Scenario: Inserting a wrong code in the two-step verification (phone number)
+> Given that the *two-step verification* option in my account is activated
+>
+> And I click the "Forgot password?" button
+>
+> When I see a section saying: "Insert your phone number or email in order to receive a code"
+>
+> And I insert a valid phone number
+>
+> And I see a notification saying "Insert the code sent to your phone number" 
 >
 > When I insert the wrong verification code
 >
@@ -109,7 +125,7 @@
   
 
 **Scenario: Insertin the right code in the two-step verification
-> Given that I activated the *two-step verification* option in my account
+> Given that the *two-step verification* option in my account is activated
 >
 > And I click the "Forgot password?" button
 >
@@ -128,11 +144,13 @@
 
   
 **Scenario: Accessing Terms of service
-> Given that I want to acces the Terms of service
+> Given that I am in the Sign up screen 
+>
+> And I insert all necessary information
 >
 > And I click the "Terms of services" section on the sign up screen
 >
-> Then I should be redirectioned to a new page that contain all Terms of service
+> Then I should see a popup notification that contains all Terms of service
   
 
 **Scenario: Accessing Privacy policy
@@ -151,7 +169,7 @@
 >
 > And I click the "Sign Up" button
 >
-> Then I should be able to access my new account
+> Then I should see a notification saying "Your account has been created!"
   
   
  **Scenario: Confirm email
@@ -167,13 +185,13 @@
 >
 > And I try to sign in
 >
-> When I should see a notification saying "User not registered. Create a new account?"
->
+> Then I should see a notification saying "User not registered. Create a new account?"
+
 
 **Scenario: Acessing the sign up screen trough the sign in screen
 > Given that I am in the sign in screen
 >
-> And I click in the button "Sign up" 
+> When I click in the button "Sign up" 
 >
 > Then i should be redirectioned to the sign up screen
 
@@ -181,7 +199,7 @@
 **Scenario: Acessing the sign in screen trough the sign ip screen
 > Given that I am in the sign up screen
 >
-> And I click in the button "Sign in" 
+> When I click in the button "Sign in" 
 >
 > Then i should be redirectioned to the sign in screen
 
@@ -192,12 +210,12 @@
 >
 > And I don't select the "I agree to the Terms of Service and Privacy Policy" checkbox 
 >
-> And I click the "Sign Up" button
+> When I click the "Sign Up" button
 >
 > Then I should see a notification saying "Accept the Terms of Service and Privacy Policy before continue"
   
   
-**Scenario: Trying to sign up with a registered account
+**Scenario: Trying to sign up with a registered email
 > Given that I insert data previously registered
 >
 > And I select the "I agree to the Terms of Service and Privacy Policy" checkbox 
