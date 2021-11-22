@@ -41,29 +41,29 @@
 **Scenario: Searching for the user's account in order to recorver the password
 > Given that I click the *Forgot password?* button
 >
-> Then I should see a section saying _"Find your account: Insert your e-mail or username"_
+> Then I should see a section saying _"Find your account: Insert your email or username"_
 
   
   
 **Scenario: Searching for the user's account with valid information
 > Given that I click the *Forgot password?* button
 >
-> And I see the _"Find your account: Insert your e-mail or username"_ section
+> And I see the _"Find your account: Insert your email or username"_ section
 >
 > And I insert valid information
 >
-> Then I should see a notification saying _"A new password has been sent to your e-mail"
+> Then I should see a notification saying _"A new password has been sent to your email"
   
   
   
 **Scenario: Searching for the user's account with invalid information
 > Given that I click the *Forgot password?* button
 >
-> And I see the _"Find your account: Insert your e-mail or username"_ section
+> And I see the _"Find your account: Insert your email or username"_ section
 >
 > And I insert not valid information
 >
-> Then I should see a notification saying _"E-mail or username not found. Check your informations and insert it again"
+> Then I should see a notification saying _"Email or username not found. Check your informations and insert it again"
 
   
   
@@ -72,11 +72,11 @@
 >
 > And I click the button "Forgot password?" 
 >
-> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+> When I see a section saying: "Insert your phone number or email in order to receive a code"
 >
-> And I insert a valid e-mail
+> And I insert a valid email
 >
-> Then I should see a notification saying "Insert the code sent to your e-mail" before change the password
+> Then I should see a notification saying "Insert the code sent to your email" before change the password
   
   
   
@@ -85,7 +85,7 @@
 >
 > And I click the "Forgot password?" button
 >
-> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+> When I see a section saying: "Insert your phone number or email in order to receive a code"
 >
 > And I insert a valid phone number
 >
@@ -97,7 +97,7 @@
 >
 > And I click the "Forgot password?" button
 >
-> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+> When I see a section saying: "Insert your phone number or email in order to receive a code"
 >
 > And I insert a valid phone number/ email
 >
@@ -113,7 +113,7 @@
 >
 > And I click the "Forgot password?" button
 >
-> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+> When I see a section saying: "Insert your phone number or email in order to receive a code"
 >
 > And I insert a valid phone number/ email
 >
@@ -154,12 +154,37 @@
 > Then I should be able to access my new account
   
   
- **Scenario: Confirming e-mail
+ **Scenario: Confirm email
 > Given that I sucessfully create my new account
 >
-> And I access my profile
+> When I access my profile
 >
 > Then I should see a "Confirm your email" notification
+  
+  
+**Scenario: Trying to sign in with a non registered account
+> Given that I am not registered 
+>
+> And I try to sign in
+>
+> When I should see a notification saying "User not registered. Create a new account?"
+>
+
+**Scenario: Acessing the sign up screen trough the sign in screen
+> Given that I am in the sign in screen
+>
+> And I click in the button "Sign up" 
+>
+> Then i should be redirectioned to the sign up screen
+
+  
+**Scenario: Acessing the sign in screen trough the sign ip screen
+> Given that I am in the sign up screen
+>
+> And I click in the button "Sign in" 
+>
+> Then i should be redirectioned to the sign in screen
+
 
 
 **Scenario: Not selecting the Terms of Service and Privacy Policy checkbox
@@ -186,4 +211,3 @@
 > Then I should be redirectioned to the Sign in screen
 
 
-**Scenario: 
