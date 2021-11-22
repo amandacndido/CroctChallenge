@@ -28,9 +28,9 @@
 **Scenario: Inserting a wrong password**
 > Given that I am in the *sign in* page
 >
-> And I am registerd user
+> And I am registered user
 >
-> When I enter a wrong user password
+> When I enter a wrong password
 >
 > And I click the *Sign in* button
 >
@@ -63,18 +63,20 @@
 >
 > And I insert not valid information
 >
-> Then I should see a notification saying _"E-mail not found. Check your informations and insert again"
+> Then I should see a notification saying _"E-mail or username not found. Check your informations and insert it again"
 
   
   
 **Scenario: Changing to a new password with two-step verification activated (e-mail)
 > Given that I activated the *two-step verification* option in my account
 >
-> And I click the "Forgot password?" button
+> And I click the button "Forgot password?" 
+>
+> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
 >
 > And I insert a valid e-mail
 >
-> Then I should see a "Insert the code sent to your e-mail" notification before change the password
+> Then I should see a notification saying "Insert the code sent to your e-mail" before change the password
   
   
   
@@ -83,13 +85,45 @@
 >
 > And I click the "Forgot password?" button
 >
+> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+>
 > And I insert a valid phone number
 >
-> Then I should see a "Insert the code sent to your phone" notification before change the password
+> Then I should see a notification saying "Insert the code sent to your phone" before change the password
   
  
-**Scenario: Think about options
+**Scenario: Inserting a wrong code in the two-step verification 
+> Given that I activated the *two-step verification* option in my account
+>
+> And I click the "Forgot password?" button
+>
+> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+>
+> And I insert a valid phone number/ email
+>
+> And I see a notification saying "Insert the code sent to your phone" 
+>
+> When I insert the wrong verification code
+>
+> Then I should see a notification saying "The  inserted code is incorrect. Send a new code?"
+  
 
+**Scenario: Insertin the right code in the two-step verification
+> Given that I activated the *two-step verification* option in my account
+>
+> And I click the "Forgot password?" button
+>
+> When I see a section saying: "Insert your phone number or e-mail in order to receive a code"
+>
+> And I insert a valid phone number/ email
+>
+> And I see a notification saying "Insert the code sent to your phone" 
+>
+> When I insert the rigt verification code
+>
+> Then I should see a section saying "Insert your new password"
+  
+  
 ## Sign up
 
   
