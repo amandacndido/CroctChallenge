@@ -128,5 +128,27 @@
 > Then I should see a "Confirm your email" notification
 
 
+**Scenario: Denying Terms of Service and Privacy Policy
+> Given that I insert all needed information in the Sign up screen
+>
+> And I don't select the "I agree to the Terms of Service and Privacy Policy" checkbox 
+>
+> And I click the "Sign Up" button
+>
+> Then I should see a notification saying "Accept the Terms of Service and Privacy Policy before continue"
+  
+  
+**Scenario: Trying to sign up with a registered account
+> Given that I insert data previously registered
+>
+> And select the "I agree to the Terms of Service and Privacy Policy" checkbox 
+>
+> And click to "Sign up"
+>
+> When I see a notification saying "Registered user. Do you want to `access you account?` "
+> 
+> And I click `access you account?` option
+>
+> Then I should be redirectioned to the Sign in screen
 
 
