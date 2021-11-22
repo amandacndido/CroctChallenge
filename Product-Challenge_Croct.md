@@ -38,7 +38,7 @@
   
   
   
-**Scenario: Searching for the user's account
+**Scenario: Searching for the user's account in order to recorver the password
 > Given that I click the *Forgot password?* button
 >
 > Then I should see a section saying _"Find your account: Insert your e-mail or username"_
@@ -91,13 +91,42 @@
 **Scenario: Think about options
 
 ## Sign up
-  Terms of service User's stories
+
   
-**Scenario: Accepting Terms of service
-> Given that I 
+**Scenario: Accessing Terms of service
+> Given that I want to acces the Terms of service
 >
+> And I click the "Terms of services" section on the sign up screen
 >
+> Then I should be redirectioned to a new page that contain all Terms of service
+  
+
+**Scenario: Accessing Privacy policy
+> Given that I want to acces the Privacy policy 
 >
+> And I click the "Privacy policy" section on the sign up screen
 >
+> Then I should be redirectioned to a new page that contain all Privacy policy details
+  
+  
+  
+**Scenario: Succesfuly creating an account
+> Given that I insert valid information in the sign up screen
 >
+> And I select the "I agree to the Terms of Service and Privacy Policy" checkbox 
+>
+> And I click the "Sign Up" button
+>
+> Then I should be able to access my new account
+  
+  
+ **Scenario: Confirming e-mail
+> Given that I sucessfully create my new account
+>
+> And I access my profile
+>
+> Then I should see a "Confirm your email" notification
+
+
+
 
