@@ -206,7 +206,7 @@
 >
 > When I see a notification saying "Registered user. Do you want to `access you account?` "
 > 
-> And I click `access you account?` option
+> And I click the `access you account?` option
 >
 > Then I should be redirectioned to the Sign in screen
 
