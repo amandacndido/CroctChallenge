@@ -109,6 +109,8 @@
 >
 > When I insert the wrong verification code
 >
+> And I click to "Verify code"
+>
 > Then I should see a notification saying _"The  inserted code is incorrect. `Send a new code?`"_
   
 <br />  
