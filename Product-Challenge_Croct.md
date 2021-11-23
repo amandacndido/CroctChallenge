@@ -63,49 +63,49 @@
 >
 > Given that I click the *Forgot password?* button
 >
-> When I see the _"Find your account: Insert your email:" section
+> When I see the _"Find your account: Insert your email:"_ section
 >
-> And I insert not valid information
+> And I insert invalid information
 >
-> Then I should see a notification saying "Email not found. Check your informations and insert it again"
+> Then I should see a notification saying _"Email not found. Check your informations and insert it again"_
 
 <br />  
   
->**Scenario: Changing to a new password with two-step verification activated ** 
+>**Scenario: Changing to a new password with two-step verification activated** 
 >
 > Given that the *two-step verification* option in my account is activated
 >
-> And I click the button "Forgot password?" 
+> And I click the button "Forgot password?"
 >
-> When I see a section saying: "Insert your email in order to receive a code"
+> When I see a section saying: _"Insert your email in order to receive a code"_
 >
 > And I insert a valid email
 >
-> Then I should see a notification saying "Insert the code sent to your email" 
+> Then I should see a notification saying _"Insert the code sent to your email"_
   
 <br />  
  
 >**Scenario: Inserting a wrong code in the two-step verification** 
 >
-> Given that I see the notification saying "Insert the code sent to your email" 
+> Given that I see the notification saying _"Insert the code sent to your email"_
 >
 > When I insert the wrong verification code
 >
-> Then I should see a notification saying "The  inserted code is incorrect. `Send a new code?`"
+> Then I should see a notification saying _"The  inserted code is incorrect. `Send a new code?`"_
   
 <br />  
   
 >**Scenario: Inserting the right code in the two-step verification** 
 >
-> Given that I see the notification saying "Insert the code sent to your email" 
+> Given that I see the notification saying _"Insert the code sent to your email"_
 >
 > When I insert the right verification code
 >
-> And I see a notification saying "Insert your new password"
+> And I click to "Verify code"
 >
-> And I click to "Save"
->
-> Then  Then I should see a notification saying "Your password has been changed"
+> Then I should see a notification saying _"Code verified. Insert your new password: "_
+
+
   
 <br />  
   
