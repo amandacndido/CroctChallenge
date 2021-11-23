@@ -7,7 +7,7 @@
   
 ## Sign In
  
-   
+<br /> 
 
 >**Scenario: Changing to a new password**
 >
@@ -23,7 +23,7 @@
 > 
 > Then I should see a notification saying _"Your password has been changed successfully! "_
   
-  
+<br />
   
 >**Scenario: Inserting a wrong password**
 > Given that I am a registered user in the *sign in* page
@@ -34,7 +34,7 @@
 >
 > Then I should see a notification saying _"Your password is incorrect. Forget your password?"_
   
-  
+<br />  
   
 >**Scenario: Searching for the user's account in order to recorver the password**
 > Given that I am a registered user in the *sign in* page
@@ -43,18 +43,18 @@
 >
 > Then I should see a section saying _"Find your account: Insert your email or username"_
 
-  
+<br /> 
   
 >**Scenario: Searching for the user's account with valid information**
 > Given that I click the *Forgot password?* button
 >
-> When I see a section saying _"Find your account: Insert your email: "_ 
+> When I see a section saying  _"Find your account: Insert your email: "_ 
 >
 > And I insert valid information
 >
-> Then I should see a notification saying "A new password has been sent to your email"
+> Then I should see a notification saying _"A new password has been sent to your email"_
   
-  
+<br />  
   
 >**Scenario: Searching for the user's account with invalid information**
 > Given that I click the *Forgot password?* button
@@ -65,7 +65,7 @@
 >
 > Then I should see a notification saying "Email not found. Check your informations and insert it again"
 
-  
+<br />  
   
 >**Scenario: Changing to a new password with two-step verification activated **
 > Given that the *two-step verification* option in my account is activated
@@ -78,7 +78,7 @@
 >
 > Then I should see a notification saying "Insert the code sent to your email" 
   
-  
+<br />  
  
 >**Scenario: Inserting a wrong code in the two-step verification**
 > Given that I see the notification saying "Insert the code sent to your email" 
@@ -87,9 +87,8 @@
 >
 > Then I should see a notification saying "The  inserted code is incorrect. `Send a new code?`"
   
+<br />  
   
-  
-
 >**Scenario: Inserting the right code in the two-step verification**
 > Given that I see the notification saying "Insert the code sent to your email" 
 >
@@ -101,33 +100,36 @@
 >
 > Then  Then I should see a notification saying "Your password has been changed"
   
+<br />  
   
 ## Sign up
 
+<br />  
   
 >**Scenario: Accessing Terms of service**
 > Given that I am in the Sign up screen 
 >
 > And I insert all necessary information
 >
-> When I click the "Terms of services" section on the sign up screen
+> When I click the "Terms of services" section 
 >
 > Then I should see a popup notification that contains all Terms of service
   
-
+<br />
+  
 >**Scenario: Accessing Privacy policy**
 > Given that I am in the Sign up screen 
 >
 > And I insert all necessary information
 >
-> When I click the "Privacy policy" section on the sign up screen
+> When I click the _"Privacy policy"_ section 
 >
 > Then I should see a popup notification that contains all Privacy policy details
   
-  
+<br />  
   
 >**Scenario: Succesfuly creating an account**
-> Given that I insert valid information in the sign up screen
+> Given that I insert valid information in the Sign up screen
 >
 > And I select the "I agree to the Terms of Service and Privacy Policy" checkbox 
 >
@@ -135,22 +137,36 @@
 >
 > Then I should see a notification saying "Your account has been created!"
   
+<br /> 
   
->**Scenario: Confirm email**
-> Given that I sucessfully create my new account
+>**Scenario: Confirm email request**
+> Given that I successfully created my new account
 >
 > When I access my profile
 >
-> Then I should see a "Confirm your email" notification
+> Then I should see a popup notification with a button saying "Confirm your email" 
+
+<br />  
   
+>**Scenario: Receive email confirmation**
+> Given that I click the "Confirm your email" button
+>
+> When I access my inbox
+>
+> Then I should see a "Confirm my email address" button in an email sent by Croct
   
-                     **Scenario: Confirm email
-                    > Given that I sucessfully create my new account
-                    >
-                    > When I access my profile
-                    >
-                    > Then I should see a "Confirm your email" notification
+<br />
   
+>**Scenario: successfully confirming an email**
+> Given that I click the "Confirm my email address" button in my inbox
+>
+> When I am redirectioned to a new Croct screen saying "Your email has been confirmed. `Go back to your account` "
+>
+> And I click the `Go back to your account` button
+>
+> Then I should be sent to my account 
+ 
+<br />
   
 >**Scenario: Trying to sign in with a non registered account**
 > Given that I am not registered 
@@ -159,23 +175,25 @@
 >
 > Then I should see a notification saying "User not registered. Create a new account?"
 
-
->**Scenario: Acessing the sign up screen trough the sign in screen**
-> Given that I am in the sign in screen
->
-> When I click in the button "Sign up" 
->
-> Then i should be redirectioned to the sign up screen
-
+<br />
   
->**Scenario: Acessing the sign in screen trough the sign ip screen**
-> Given that I am in the sign up screen
+>**Scenario: Acessing the Sign up screen trough the Sign in screen**
+> Given that I am in the Sign in screen
 >
-> When I click in the button "Sign in" 
+> When I click in the button saying "Sign up" 
 >
-> Then i should be redirectioned to the sign in screen
+> Then i should be redirectioned to the Sign up screen
 
+<br />
+  
+>**Scenario: Acessing the Sign in screen trough the Sign up screen**
+> Given that I am in the Sign up screen
+>
+> When I click in the button saying "Sign in" 
+>
+> Then I should be redirectioned to the Sign in screen
 
+<br />
 
 >**Scenario: Not selecting the Terms of Service and Privacy Policy checkbox**
 > Given that I insert all needed information in the Sign up screen
@@ -185,7 +203,8 @@
 > When I click the "Sign Up" button
 >
 > Then I should see a notification saying "Accept the Terms of Service and Privacy Policy before continue"
-  
+
+ <br /> 
   
 >**Scenario: Trying to sign up with a registered email**
 > Given that I insert data previously registered
@@ -194,7 +213,12 @@
 >
 > And I click to "Sign up"
 >
-> When I see a notification saying "Registered user. Do you want to `access you account?` "
+> Then I should see a notification saying "Registered user. Do you want to `access you account?`" 
+ 
+ <br /> 
+  
+>**Scenario: Acessing the Sign in screen through the "Registered user " notification
+> Given that I see the notification saying "Registered user. Do you want to `access you account?` "
 > 
 > And I click the `access you account?` option
 >
