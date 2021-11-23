@@ -217,7 +217,7 @@
  
  <br /> 
   
->**Scenario: Acessing the Sign in screen through the "Registered user " notification**
+>**Scenario: Acessing the Sign in screen through the "Registered user " notification**  <br /> 
 > Given that I see the notification saying "Registered user. Do you want to `access you account?` "
 > 
 > And I click the `access you account?` option
