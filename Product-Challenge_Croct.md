@@ -9,7 +9,7 @@
  
 <br /> 
 
->**Scenario: Changing to a new password** <br /> 
+>**Scenario: Changing to a new password**
 >
 > Given that I am a registered user 
 >
@@ -25,7 +25,8 @@
   
 <br />
   
->**Scenario: Inserting a wrong password** <br /> 
+>**Scenario: Inserting a wrong password** 
+>
 > Given that I am a registered user in the *sign in* page
 >
 > When I enter a wrong password
@@ -36,7 +37,8 @@
   
 <br />  
   
->**Scenario: Searching for the user's account in order to recorver the password** <br /> 
+>**Scenario: Searching for the user's account in order to recorver the password** 
+>
 > Given that I am a registered user in the *sign in* page
 >
 > When I click the *Forgot password?* button
@@ -45,7 +47,8 @@
 
 <br /> 
   
->**Scenario: Searching for the user's account with valid information** <br /> 
+>**Scenario: Searching for the user's account with valid information** 
+>
 > Given that I click the *Forgot password?* button
 >
 > When I see a section saying  _"Find your account: Insert your email: "_ 
@@ -56,7 +59,8 @@
   
 <br />  
   
->**Scenario: Searching for the user's account with invalid information** <br /> 
+>**Scenario: Searching for the user's account with invalid information** 
+>
 > Given that I click the *Forgot password?* button
 >
 > When I see the _"Find your account: Insert your email:" section
@@ -67,7 +71,8 @@
 
 <br />  
   
->**Scenario: Changing to a new password with two-step verification activated ** <br /> 
+>**Scenario: Changing to a new password with two-step verification activated ** 
+>
 > Given that the *two-step verification* option in my account is activated
 >
 > And I click the button "Forgot password?" 
@@ -80,7 +85,8 @@
   
 <br />  
  
->**Scenario: Inserting a wrong code in the two-step verification** <br /> 
+>**Scenario: Inserting a wrong code in the two-step verification** 
+>
 > Given that I see the notification saying "Insert the code sent to your email" 
 >
 > When I insert the wrong verification code
@@ -89,7 +95,8 @@
   
 <br />  
   
->**Scenario: Inserting the right code in the two-step verification** <br /> 
+>**Scenario: Inserting the right code in the two-step verification** 
+>
 > Given that I see the notification saying "Insert the code sent to your email" 
 >
 > When I insert the right verification code
@@ -106,7 +113,8 @@
 
 <br />  
   
->**Scenario: Accessing Terms of service** <br /> 
+>**Scenario: Accessing Terms of service** 
+>
 > Given that I am in the Sign up screen 
 >
 > And I insert all necessary information
@@ -117,7 +125,8 @@
   
 <br />
   
->**Scenario: Accessing Privacy policy** <br /> 
+>**Scenario: Accessing Privacy policy** 
+>
 > Given that I am in the Sign up screen 
 >
 > And I insert all necessary information
@@ -128,7 +137,8 @@
   
 <br />  
   
->**Scenario: Succesfuly creating an account**  <br /> 
+>**Scenario: Succesfuly creating an account**  
+>
 > Given that I insert valid information in the Sign up screen
 >
 > And I select the "I agree to the Terms of Service and Privacy Policy" checkbox 
@@ -139,7 +149,8 @@
   
 <br /> 
   
->**Scenario: Confirm email request** <br /> 
+>**Scenario: Confirm email request** 
+>
 > Given that I successfully created my new account
 >
 > When I access my profile
@@ -148,7 +159,8 @@
 
 <br />  
   
->**Scenario: Receive email confirmation** <br /> 
+>**Scenario: Receive email confirmation** 
+>
 > Given that I click the "Confirm your email" button
 >
 > When I access my inbox
@@ -157,7 +169,8 @@
   
 <br />
   
->**Scenario: successfully confirming an email** <br /> 
+>**Scenario: successfully confirming an email**  
+>
 > Given that I click the "Confirm my email address" button in my inbox
 >
 > When I am redirectioned to a new Croct screen saying "Your email has been confirmed. `Go back to your account` "
@@ -168,7 +181,8 @@
  
 <br />
   
->**Scenario: Trying to sign in with a non registered account** <br /> 
+>**Scenario: Trying to sign in with a non registered account** 
+>
 > Given that I am not registered 
 >
 > And I try to sign in
@@ -177,7 +191,8 @@
 
 <br />
   
->**Scenario: Acessing the Sign up screen trough the Sign in screen** <br /> 
+>**Scenario: Acessing the Sign up screen trough the Sign in screen** 
+>
 > Given that I am in the Sign in screen
 >
 > When I click in the button saying "Sign up" 
@@ -186,7 +201,8 @@
 
 <br />
   
->**Scenario: Acessing the Sign in screen trough the Sign up screen** <br /> 
+>**Scenario: Acessing the Sign in screen trough the Sign up screen** 
+>
 > Given that I am in the Sign up screen
 >
 > When I click in the button saying "Sign in" 
@@ -195,7 +211,8 @@
 
 <br />
 
->**Scenario: Not selecting the Terms of Service and Privacy Policy checkbox** <br /> 
+>**Scenario: Not selecting the Terms of Service and Privacy Policy checkbox** 
+>
 > Given that I insert all needed information in the Sign up screen
 >
 > And I don't select the "I agree to the Terms of Service and Privacy Policy" checkbox 
@@ -206,7 +223,8 @@
 
  <br /> 
   
->**Scenario: Trying to sign up with a registered email** <br /> 
+>**Scenario: Trying to sign up with a registered email** 
+>
 > Given that I insert data previously registered
 >
 > And I select the "I agree to the Terms of Service and Privacy Policy" checkbox 
@@ -217,7 +235,8 @@
  
  <br /> 
   
->**Scenario: Acessing the Sign in screen through the "Registered user " notification**  <br /> 
+>**Scenario: Acessing the Sign in screen through the "Registered user " notification**  
+>
 > Given that I see the notification saying "Registered user. Do you want to `access you account?` "
 > 
 > And I click the `access you account?` option
