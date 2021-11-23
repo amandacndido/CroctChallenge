@@ -21,7 +21,7 @@
 >
 > And I click to *Save*
 > 
-> Then I should see a notification saying _"Your password has been changed successfully! "_
+> Then I should see a notification saying _"Your password has been successfully changed! "_
   
 <br />
   
@@ -43,7 +43,7 @@
 >
 > When I click the *Forgot password?* button
 >
-> Then I should see a section saying _"Find your account: Insert your email or username"_
+> Then I should see a section saying _"Find your account: Insert your email address"_
 
 <br /> 
   
