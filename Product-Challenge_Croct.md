@@ -55,6 +55,8 @@
 >
 > And I insert valid information
 >
+> And I click *Next*
+>
 > Then I should see a notification saying _"A new password has been sent to your email"_
   
 <br />  
@@ -67,6 +69,8 @@
 >
 > And I insert invalid information
 >
+> And I click *Next*
+>
 > Then I should see a notification saying _"Email not found. Check your informations and insert it again"_
 
 <br />  
@@ -75,16 +79,30 @@
 >
 > Given that the *two-step verification* option in my account is activated
 >
-> And I click the button "Forgot password?"
+> And I click the button *"Forgot password?"*
 >
-> When I see a section saying: _"Insert your email in order to receive a code"_
+> When I see a section saying: _"Find your account: Insert your email:"_
 >
 > And I insert a valid email
+>
+> And I click *Next*
 >
 > Then I should see a notification saying _"Insert the code sent to your email"_
   
 <br />  
  
+>**Scenario: Receving a code from Croct in two-step verification** 
+>
+> Given that I see a section saying: _"Find your account: Insert your email:"_
+>
+> When I insert a valid email
+>
+> And click *Next*
+>
+> Then I should receive a code from Croct in my inbox
+
+ <br />  
+  
 >**Scenario: Inserting a wrong code in the two-step verification** 
 >
 > Given that I see the notification saying _"Insert the code sent to your email"_
