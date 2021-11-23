@@ -27,7 +27,7 @@
   
 >**Scenario: Inserting a wrong password** 
 >
-> Given that I am a registered user in the *sign in* page
+> Given that I am a registered user in the *Sign in* page
 >
 > When I enter a wrong password
 >
@@ -39,7 +39,7 @@
   
 >**Scenario: Searching for the user's account in order to recorver the password** 
 >
-> Given that I am a registered user in the *sign in* page
+> Given that I am a registered user in the *Sign in* page
 >
 > When I click the *Forgot password?* button
 >
@@ -205,7 +205,7 @@
 >
 > Given that I am not registered 
 >
-> And I try to sign in
+> And I try to Sign in
 >
 > Then I should see a notification saying "User not registered. Create a new account?"
 
@@ -217,7 +217,7 @@
 >
 > When I click in the button saying "Sign up" 
 >
-> Then i should be redirectioned to the Sign up screen
+> Then I should be redirectioned to the Sign up screen
 
 <br />
   
